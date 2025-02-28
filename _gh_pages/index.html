@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="Themesberg">
+<meta name="generator" content="Hugo 0.144.2">
+
+<title>FirstParty Assessments</title>
+
+<link rel="canonical" href="http://localhost:1313/">
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="http://localhost:1313//app.css">
+
+
+<script>
+    
+    if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+    } else {
+        document.documentElement.classList.remove('dark')
+    }
+</script>
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-800">
+
+    
+<header>
+    <nav class="fixed z-30 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700 py-3 px-4">
+        <div class="flex justify-between items-center max-w-screen-2xl mx-auto">
+            <div class="flex justify-start items-center dovy">
+                <a href="http://localhost:1313/" class="flex mr-14">
+                    <img id="theme-light-logo" src="http://localhost:1313/images/FP_HORIZ_TAG_NAVY_BRIGHTGREEN.png" class="hidden mr-3 h-8" alt="FirstParty Logo" />
+                    <img id="theme-dark-logo" src="http://localhost:1313/images/FP_HORIZ_TAG_WHITE_BRIGHTGREEN.png" class="hidden mr-3 h-8" alt="FirstParty Logo" />
+                    <span class="self-center hidden sm:flex text-md font-semibold whitespace-nowrap dark:text-white">Assessments</span>
+                </a>
+                
+                <div class="hidden justify-between items-center w-full lg:flex lg:w-auto lg:order-1">
+                </div>
+            </div>
+            <div class="flex justify-between items-center lg:order-2">
+                <div class="flex items-center justify-between">
+                </div>
+                <button id="theme-toggle" data-tooltip-target="tooltip-toggle" type="button" class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+                </button>
+
+            </div>
+        </div>
+    </nav>
+    <nav class="bg-white dark:bg-gray-900">
+        
+        <ul id="toggleMobileMenu" class="hidden flex-col mt-0 pt-16 w-full text-sm font-medium lg:hidden">
+            <li class="block border-b dark:border-gray-700">
+                <a href="#" class="block py-3 px-4 text-gray-900 lg:py-0 dark:text-white lg:hover:underline lg:px-0" aria-current="page">Home</a>
+            </li>
+            <li class="block border-b dark:border-gray-700">
+                <a href="#" class="block py-3 px-4 text-gray-900 lg:py-0 dark:text-white lg:hover:underline lg:px-0">Messages</a>
+            </li>
+            <li class="block border-b dark:border-gray-700">
+                <a href="#" class="block py-3 px-4 text-gray-900 lg:py-0 dark:text-white lg:hover:underline lg:px-0">Profile</a>
+            </li>
+            <li class="block border-b dark:border-gray-700">
+                <a href="#" class="block py-3 px-4 text-gray-900 lg:py-0 dark:text-white lg:hover:underline lg:px-0">Settings</a>
+            </li>
+            <li class="block border-b dark:border-gray-700">
+                <button type="button" data-collapse-toggle="dropdownMobileNavbar" class="flex justify-between items-center py-3 px-4 w-full text-gray-900 lg:py-0 dark:text-white lg:hover:underline lg:px-0">Dropdown <svg class="w-6 h-6 text-gray-500 dark:text-gray-400" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg></button>
+                <ul id="dropdownMobileNavbar" class="hidden"> 
+                    <li class="block border-t border-b dark:border-gray-700">
+                        <a href="#" class="block py-3 px-4 text-gray-900 lg:py-0 dark:text-white lg:hover:underline lg:px-0">Item 1</a>
+                    </li>
+                    <li class="block border-b dark:border-gray-700">
+                        <a href="#" class="block py-3 px-4 text-gray-900 lg:py-0 dark:text-white lg:hover:underline lg:px-0">Item 2</a>
+                    </li>
+                    <li class="block">
+                        <a href="#" class="block py-3 px-4 text-gray-900 lg:py-0 dark:text-white lg:hover:underline lg:px-0">Item 3</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+  </header>
+<div class="flex pt-16 overflow-hidden bg-gray-50 dark:bg-gray-900">
+  
+  <div id="main-content" class="relative w-full max-w-screen-2xl mx-auto h-full overflow-y-auto bg-gray-50 dark:bg-gray-900">
+    <main>
+
+      
+      <nav class="flex px-5 py-3 mt-6 text-gray-700 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700" aria-label="Breadcrumb">
+        <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
+          <li class="inline-flex items-center">
+            <a href="http://localhost:1313/" class="inline-flex items-center text-sm font-medium text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
+              <img src="http://localhost:1313/home.svg" style="height:12px;" alt="">
+              &nbsp;Clients
+            </a>
+          </li>
+        </ol>
+      </nav>
+
+
+      
+<div class="px-4 pt-6 2xl:px-0">
+    <div class="grid gap-4 md:grid-cols-2 grid-cols-1">
+        <!-- Main widget -->
+        <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm md:col-span-1 col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex-shrink-0">
+                    <!--          <span class="text-xl font-bold leading-none text-gray-900 sm:text-2xl dark:text-white">45</span>-->
+                    <h3 class="text-base font-light text-gray-500 dark:text-gray-400">Process Steps</h3>
+                </div>
+                <!--        <div class="flex items-center justify-end flex-1 text-base font-medium text-green-500 dark:text-green-400">-->
+                <!--          12.5%-->
+                <!--          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">-->
+                <!--            <path fill-rule="evenodd"-->
+                <!--                  d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z"-->
+                <!--                  clip-rule="evenodd"></path>-->
+                <!--          </svg>-->
+                <!--        </div>-->
+            </div>
+            <div id="main-chart"></div>
+        </div>
+
+        <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm md:col-span-1 col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex-shrink-0">
+                    <!--          <span class="text-xl font-bold leading-none text-gray-900 sm:text-2xl dark:text-white">45</span>-->
+                    <h3 class="text-base font-light text-gray-500 dark:text-gray-400">Execution Time Per Step</h3>
+                </div>
+
+            </div>
+            <div class="w-full" id="new-products-chart"></div>
+        </div>
+    </div>
+
+
+    <div class="p-4 mt-5 bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+        <!-- Card header -->
+        <div class="items-center justify-between lg:flex">
+            <div class="mb-4 lg:mb-0">
+                <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Clients</h3>
+            </div>
+        </div>
+        <!-- Table -->
+        <div class="flex flex-col mt-6">
+            <div class="overflow-x-auto rounded-lg">
+                <div class="inline-block min-w-full align-middle">
+                    <div class="overflow-hidden shadow sm:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-600">
+                            <thead class="bg-gray-50 dark:bg-gray-700">
+                            <tr>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    Assessment
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    Files
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    Reception
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    Stage
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    Normalize
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    Profiling
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    FP Status
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody class="bg-white dark:bg-gray-800">
+                            <tr>
+                                <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
+                                    <span class="font-semibold">Paychex</span>
+                                </td>
+                                <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                    30
+                                </td>
+                                <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
+                                    100% <small class="hidden md:visible">(30/30)</small>
+                                </td>
+                                <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                    100% <small class="hidden md:visible">(2/2)</small>
+                                </td>
+                                <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                    5% <small class="hidden md:visible">(1/2)</small>
+                                </td>
+                                <td class="p-4 items-center p-4 space-x-2 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                    5% <small class="hidden md:visible">(1/2)</small>
+                                </td>
+                                <td class="p-4 items-center p-4 space-x-2 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                    5% <small class="max-md:hidden">(1/2)</small>
+                                </td>
+                                <td class="inline-flex p-4 whitespace-nowrap" style="width:65px;">
+                                    <a href="http://localhost:1313/client?name=Paychex" type="button"
+                                            class="mb-4 sm:mb-0 mr-4 inline-flex items-center text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-4 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
+                                        Details
+                                    </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </main>
+     <footer class="md:flex md:items-center md:justify-between px-4 2xl:px-0 py-6 md:py-10">
+    <p class="text-sm text-center text-gray-500 mb-4 md:mb-0">
+        &copy; 2024-2025 <a href="https://flowbite.com//" class="hover:underline" target="_blank">FirstParty.com</a>. All rights reserved.
+    </p>
+
+</footer>
+   
+  </div>
+
+</div>
+
+
+
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+<script src="http://localhost:1313//app.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.2/datepicker.min.js"></script>
+  </body>
+</html>

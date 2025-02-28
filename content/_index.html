@@ -1,0 +1,127 @@
+---
+title: FirstParty Assessments
+layout: dashboard
+group: layouts
+footer: true
+---
+
+<div class="px-4 pt-6 2xl:px-0">
+    <div class="grid gap-4 md:grid-cols-2 grid-cols-1">
+        <!-- Main widget -->
+        <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm md:col-span-1 col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex-shrink-0">
+                    <!--          <span class="text-xl font-bold leading-none text-gray-900 sm:text-2xl dark:text-white">45</span>-->
+                    <h3 class="text-base font-light text-gray-500 dark:text-gray-400">Process Steps</h3>
+                </div>
+                <!--        <div class="flex items-center justify-end flex-1 text-base font-medium text-green-500 dark:text-green-400">-->
+                <!--          12.5%-->
+                <!--          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">-->
+                <!--            <path fill-rule="evenodd"-->
+                <!--                  d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z"-->
+                <!--                  clip-rule="evenodd"></path>-->
+                <!--          </svg>-->
+                <!--        </div>-->
+            </div>
+            <div id="main-chart"></div>
+        </div>
+
+        <div class="p-4 bg-white border border-gray-200 rounded-lg shadow-sm md:col-span-1 col-span-2 dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+            <div class="flex items-center justify-between mb-4">
+                <div class="flex-shrink-0">
+                    <!--          <span class="text-xl font-bold leading-none text-gray-900 sm:text-2xl dark:text-white">45</span>-->
+                    <h3 class="text-base font-light text-gray-500 dark:text-gray-400">Execution Time Per Step</h3>
+                </div>
+
+            </div>
+            <div class="w-full" id="new-products-chart"></div>
+        </div>
+    </div>
+
+
+    <div class="p-4 mt-5 bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+        <!-- Card header -->
+        <div class="items-center justify-between lg:flex">
+            <div class="mb-4 lg:mb-0">
+                <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Clients</h3>
+            </div>
+        </div>
+        <!-- Table -->
+        <div class="flex flex-col mt-6">
+            <div class="overflow-x-auto rounded-lg">
+                <div class="inline-block min-w-full align-middle">
+                    <div class="overflow-hidden shadow sm:rounded-lg">
+                        <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-600">
+                            <thead class="bg-gray-50 dark:bg-gray-700">
+                            <tr>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    Assessment
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    Files
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    Reception
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    Stage
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    Normalize
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    Profiling
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    FP Status
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody class="bg-white dark:bg-gray-800">
+                            <tr>
+                                <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
+                                    <span class="font-semibold">Paychex</span>
+                                </td>
+                                <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                    30
+                                </td>
+                                <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
+                                    100% <small class="hidden md:visible">(30/30)</small>
+                                </td>
+                                <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                    100% <small class="hidden md:visible">(2/2)</small>
+                                </td>
+                                <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                    5% <small class="hidden md:visible">(1/2)</small>
+                                </td>
+                                <td class="p-4 items-center p-4 space-x-2 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                    5% <small class="hidden md:visible">(1/2)</small>
+                                </td>
+                                <td class="p-4 items-center p-4 space-x-2 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
+                                    5% <small class="max-md:hidden">(1/2)</small>
+                                </td>
+                                <td class="inline-flex p-4 whitespace-nowrap" style="width:65px;">
+                                    <a href="/client?name=Paychex" type="button"
+                                            class="mb-4 sm:mb-0 mr-4 inline-flex items-center text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-4 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
+                                        Details
+                                    </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

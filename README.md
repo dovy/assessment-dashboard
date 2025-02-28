@@ -1,275 +1,208 @@
-# [NextJS Argon Dashboard](https://demos.creative-tim.com/nextjs-argon-dashboard?ref=njsad-github-readme) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/home?status=NextJS%20Argon%20Dashboard%20is%20a%20Free%20NextJS%204,%20Bootstrap%204,%20React%20and%20Reactstrap%20Dashboard%20%E2%9D%A4%EF%B8%8F%0Ahttps%3A//demos.creative-tim.com/nextjs-argon-dashboard-%20%23react%20%23reactstrap%20%23nextjs%20%23argon%20%23argondesign%20%23reactdashboard%20%23argonreact%20%23reactdesign%20%23bootstrap%20%23uikit%20%23freebie%20%20via%20%40CreativeTim)
+# [Flowbite Admin Dashboard](https://flowbite-admin-dashboard.vercel.app) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https%3A%2F%2Fgithub.com%2Fthemesberg%2Fflowbite-admin-dashboard&text=Check%20out%20this%20open-source%20admin%20dashboard%20built%20with%20Flowbite%20and%20Tailwind%20CSS)
 
+[![version](https://img.shields.io/npm/v/flowbite-admin-dashboard)](https://www.npmjs.com/package/flowbite-admin-dashboard)
+[![license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
+[![GitHub issues open](https://img.shields.io/github/issues/themesberg/flowbite-admin-dashboard.svg)](https://github.com/themesberg/flowbite-admin-dashboard/issues?q=is%3Aopen+is%3Aissue)
+[![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/themesberg/flowbite-admin-dashboard.svg)](https://github.com/themesberg/flowbite-admin-dashboard/issues?q=is%3Aissue+is%3Aclosed)
 
- ![version](https://img.shields.io/badge/version-1.1.0-blue.svg)  ![license](https://img.shields.io/badge/license-MIT-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/nextjs-argon-dashboard.svg?maxAge=2592000)](https://github.com/creativetimofficial/nextjs-argon-dashboard/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/argon-nextjs-argon-dashboard.svg?maxAge=2592000)](https://github.com/creativetimofficial/argon-nextjs-argon-dashboard/issues?q=is%3Aissue+is%3Aclosed) [![Join the chat at https://gitter.im/NIT-dgp/General](https://badges.gitter.im/NIT-dgp/General.svg)](https://gitter.im/creative-tim-general/Lobby) [![Chat](https://img.shields.io/badge/chat-on%20discord-7289da.svg)](https://discord.gg/E4aHAQy)
+[![Flowbite Admin Dashboard Live Preview](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/flowbite-admin-dashboard-preview.png)](https://flowbite-admin-dashboard.vercel.app/)
 
+This project is a free and open-source UI admin dashboard template built with the components from [Flowbite](https://github.com/themesberg/flowbite) and based on the utility-first [Tailwind CSS](https://github.com/tailwindlabs/tailwindcss) framework featuring charts, tables, widgets, CRUD layouts, modals, drawers, and more.
 
-![Product Image](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/nextjs-argon-dashboard/nextjs-argon-dashboard.jpg)
+This admin dashboard can quickly help you get started building an application for your project using the newest UI/UX development technologies in the open-source area including Tailwind CSS and Flowbite.
 
-Start your development with a Dashboard for [NextJS](https://nextjs.org/?ref=creativetim), [Bootstrap 4](https://getbootstrap.com/?ref=creativetim), [React](https://reactjs.org/?ref=creativetim) and [Reactstrap](https://reactstrap.github.io/?ref=creativetim). It is open source, free and it features many components that can help you create amazing websites.
+## 🌀 Built with Flowbite
 
-**Fully Coded Components**
+The interactive components such as the navbars, modals, drawers, and tooltips are all based on the popular [open-source component library called Flowbite](https://flowbite.com/) which enables us to use these elements by creating more complex set of pages and widgets inside a fully-fledged admin dashboard template.
 
-NextJS Argon Dashboard is built with over 100 individual components, giving you the freedom of choosing and combining. All components can take variations in color, that you can easily modify using SASS files.
-You will save a lot of time going from prototyping to full-functional code, because all elements are implemented. This Dashboard is coming with pre-built examples, so the development process is seamless, switching from our pages to the real website is very easy to be done.
-Every element has multiple states for colors, styles, hover, focus, that you can easily access and use.
+## 💨 Tailwind CSS utility classes
 
-**Complex Documentation**
+All of the pages, widgets, and components are solely based on the utility-first classes from Tailwind CSS and it is compatible with the latest `v3.x` of the technology by automatically purging all of the classes based on the template paths.
 
-Each element is well presented in a very complex documentation. You can read more about the idea behind this [dashboard here](https://www.creative-tim.com/learning-lab/nextjs/overview/argon-dashboard?ref=creativetim). You can check the [components here](https://www.creative-tim.com/learning-lab/nextjs/alerts/argon-dashboard?ref=creativetim) and the [foundation here](https://www.creative-tim.com/learning-lab/nextjs/colors/argon-dashboard?ref=creativetim).
+## 📊 15 example pages
 
-**Example Pages**
+Get started with 15 advanced examples pages including two different layouts of a dashboard's homepage full of charts widgets, tables, datepickers, and statistics and also with two CRUD layout pages for products, users, a settings page, authentication pages for login and register and even custom 404 and 500 error pages.
 
-If you want to get inspiration or just show something directly to your clients, you can jump start your development with our pre-built example pages. You will be able to quickly set up the basic structure for your web project.
+## 🧱 Advanced components
 
+This admin dashboard contains many advanced components both from Flowbite but also from other third-party libraries such as ApexCharts which have been customly tailored with Tailwind CSS classes and designed based on the [Flowbite Design System](https://flowbite.com/figma/).
+
+## 📚 Flowbite documentation
+
+If you want to use this project we recommend to also [study the component library](https://flowbite.com/docs/getting-started/introduction/) that we used to build this dashboard because you can use even more components from that library to enhance the examples that we've coded here already.
+
+## ⚙️ Workflow
+
+This product is built using the following widely used technologies:
+
+- Tailwind CSS: [tailwindcss.com](https://tailwindcss.com/)
+- Flowbite: [flowbite.com](http://flowbite.com/)
+- HUGO [gohugo.io](https://gohugo.io/documentation/)
+- Webpack [webpack.js.org](https://webpack.js.org/)
 
 ## Table of Contents
 
-* [Versions](#versions)
-* [Demo](#demo)
-* [Quick Start](#quick-start)
-* [Documentation](#documentation)
-* [File Structure](#file-structure)
-* [Browser Support](#browser-support)
-* [Resources](#resources)
-* [Pro Versions](#pro-versions)
-* [Kit Versions](#kit-versions)
-* [Reporting Issues](#reporting-issues)
-* [Licensing](#licensing)
-* [Useful Links](#useful-links)
+- [Flowbite Admin Dashboard ](#flowbite-admin-dashboard-)
+  - [🌀 Built with Flowbite](#-built-with-flowbite)
+  - [💨 Tailwind CSS utility classes](#-tailwind-css-utility-classes)
+  - [📊 15 example pages](#-15-example-pages)
+  - [🧱 Advanced components](#-advanced-components)
+  - [📚 Flowbite documentation](#-flowbite-documentation)
+  - [⚙️ Workflow](#️-workflow)
+  - [Table of Contents](#table-of-contents)
+  - [Demo pages](#demo-pages)
+  - [Quick start](#quick-start)
+    - [JavaScript Frameworks](#javascript-frameworks)
+    - [Back-end Frameworks](#back-end-frameworks)
+  - [File Structure](#file-structure)
+  - [Browser Support](#browser-support)
+  - [Resources](#resources)
+  - [Reporting Issues](#reporting-issues)
+  - [Technical Support or Questions](#technical-support-or-questions)
+  - [Licensing](#licensing)
+  - [Useful Links](#useful-links)
+  - [Authors](#authors)
 
+## Demo pages
 
-## Versions
+| Dashboard | Stacked Layout | Products (CRUD)
+| --- | --- | --- |
+| [![Dashboard](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/homepage.jpg)](https://flowbite-admin-dashboard.vercel.app/) | [![Stacked Layout](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/stacked.jpg)](https://flowbite-admin-dashboard.vercel.app/layouts/stacked/) | [![Products (CRUD)](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/products-crud.jpg)](https://flowbite-admin-dashboard.vercel.app/crud/products/)
 
+| Users (CRUD) | Settings | Pricing page
+| --- | --- | --- |
+| [![Users (CRUD)](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/users.jpg)](https://flowbite-admin-dashboard.vercel.app/crud/users/) | [![Settings](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/settings.jpg)](https://flowbite-admin-dashboard.vercel.app/settings/) | [![Pricing page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/pricing.jpg)](https://flowbite-admin-dashboard.vercel.app/pages/pricing/)
 
-[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/aspnet-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-asp-net?ref=njsad-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/nodejs-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-nodejs?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-react?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/angular-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-angular?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-native-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-react-native?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/vue-argon-dashboard?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/laravel_logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-laravel?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/bootstrap-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/bootstrap-vue-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/bootstrap-vue-argon-dashboard?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/icon-django.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-django?ref=njsad-github-readme)
+| Login page | Register page | Reset password
+| --- | --- | --- |
+| [![Login page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/login.jpg)](https://flowbite-admin-dashboard.vercel.app/authentication/sign-in/) | [![Register page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/register.jpg)](https://flowbite-admin-dashboard.vercel.app/authentication/sign-up/) | [![Reset password](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/reset-password.jpg)](https://flowbite-admin-dashboard.vercel.app/authentication/reset-password/)
 
+| Forgot password | Profile lock | Maintenance page
+| --- | --- | --- |
+| [![Forgot password](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/forgot-password.jpg)](https://flowbite-admin-dashboard.vercel.app/authentication/forgot-password/) | [![Profile lock](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/profile-lock.jpg)](https://flowbite-admin-dashboard.vercel.app/authentication/profile-lock/) | [![Maintenance page](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/maintenance.jpg)](https://flowbite-admin-dashboard.vercel.app/pages/maintenance/)
 
+| 404 not found | 500 server error | Playground
+| --- | --- | --- |
+| [![404 not found](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/404.jpg)](https://flowbite-admin-dashboard.vercel.app/pages/404/) | [![500 server error](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/500.jpg)](https://flowbite-admin-dashboard.vercel.app/pages/500/) | [![Playground](https://flowbite.s3.amazonaws.com/templates/flowbite-admin-dashboard/github/playground.jpg)](https://flowbite-admin-dashboard.vercel.app/playground/sidebar/)
 
-| NextJS | ASP.NET | NodeJS | React  | Angular  |
-| --- | --- | --- | --- | --- |
-| [![Argon Dashboard Asp.net](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/nextjs-argon-dashboard/nextjs-argon-dashboard.jpg)](https://www.creative-tim.com/product/nextjs-argon-dashboard) | [![Argon Dashboard Asp.net](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-aspnet/argon-dashboard-aspnet.jpg)](https://www.creative-tim.com/product/argon-dashboard-asp-net) | [![Argon Dashboard Nodejs](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-nodejs/argon-dashboard-nodejs.jpg)](https://www.creative-tim.com/product/argon-dashboard-nodejs) | [![Argon Dashboard React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-react/argon-dashboard-react.jpg)](https://www.creative-tim.com/product/argon-dashboard-react) | [![Argon Dashboard Angular](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-angular/argon-dashboard-angular.jpg)](https://www.creative-tim.com/product/argon-dashboard-angular) |
-
-| React Native | VueJS | Laravel | Bootstrap  | BootstrapVue  | Django  |
-| --- | --- | --- | --- | --- | --- |
-| [![Argon React Native](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-react-native/arg-rn-thumbnail.jpg)](https://www.creative-tim.com/product/argon-react-native) | [![Vue Argon Dashboard](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-argon-dashboard/vue-argon-dashboard.jpg)](https://www.creative-tim.com/product/vue-argon-dashboard) | [![Argon Dashboard Laravel](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-laravel/argon-dashboard-laravel.jpg)](https://www.creative-tim.com/product/argon-dashboard-laravel) | [![Argon Dashboard](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard/argon-dashboard.jpg)](https://www.creative-tim.com/product/argon-dashboard) | [![BootstrapVue Argon Dashboard](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/bootstrap-vue-argon-dashboard/bootstrap-vue-argon-dashboard.jpg)](https://www.creative-tim.com/product/bootstrap-vue-argon-dashboard) | [![Argon Dashboard Django](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-django/argon-dashboard-django.jpg)](https://www.creative-tim.com/product/argon-dashboard-django) |
-
-
-## Demo
-
-- [Start page](https://demos.creative-tim.com/nextjs-argon-dashboard/admin/dashboard)
-- [User profile page](https://demos.creative-tim.com/nextjs-argon-dashboard/admin/profile)
-- [Tables page ](https://demos.creative-tim.com/nextjs-argon-dashboard/admin/tables)
-- [Maps Page](https://demos.creative-tim.com/nextjs-argon-dashboard/admin/maps)
-- [Login page](https://demos.creative-tim.com/nextjs-argon-dashboard/auth/login)
-
-[View More](https://demos.creative-tim.com/nextjs-argon-dashboard/admin/dashboard).
-
+-   [Live Preview](https://flowbite-admin-dashboard.vercel.app/)
 
 ## Quick start
 
-- `npm i nextjs-argon-dashboard`
-- [Download from Github](https://github.com/creativetimofficial/nextjs-argon-dashboard/archive/master.zip).
-- [Download from Creative Tim](https://www.creative-tim.com/product/nextjs-argon-dashboard?ref=njsad-github-readme).
-- Install with [Bower](https://bower.io/?ref=creativetim): ```bower install nextjs-argon-dashboard```.
-- Clone the repo: `git clone https://github.com/creativetimofficial/nextjs-argon-dashboard.git`.
+1. Clone this repository or download the ZIP file
+2. Make sure that you have Node.js and NPM installed
+3. Install the project dependencies from the `package.json` file:
 
+```
+npm install
+```
 
-## Documentation
-The documentation for the Material Kit is hosted at our [website](https://www.creative-tim.com/learning-lab/nextjs/overview/argon-dashboard).
+4. Create a local server on `localhost:1313` by running the following command:
 
+```
+npm run start
+```
+
+You can also build the project and get the distribution files inside the `public/` folder by running:
+
+```
+npm run build
+```
+
+You can instantly upload your project to Vercel by selecting the default HUGO configuration, but depending on your own tech stack whether it's React.js, Vue, Nuxt.js, Next.js or a back-end framework you can also just copy the layouts from this project inside your own tech stack.
+
+Here's a list of compatible technologies and guides for Flowbite and Tailwind CSS:
+
+### JavaScript Frameworks
+
+The awesome open-source community also built and currently maintains the following standalone libraries for React, Vue, Svelte, and Angular:
+
+- [🌀 Flowbite React Library](https://github.com/themesberg/flowbite-react)
+- [🍀 Flowbite Vue Library](https://github.com/themesberg/flowbite-vue)
+- [🎸 Flowbite Svelte Library](https://github.com/themesberg/flowbite-svelte)
+- [📕 Flowbite Angular Library](https://github.com/themesberg/flowbite-angular)
+
+We also wrote integration guides for the following front-end frameworks and libraries:
+
+- [📝 Flowbite with React guide](https://flowbite.com/docs/getting-started/react/)
+- [📝 Flowbite with Next.js guide](https://flowbite.com/docs/getting-started/next-js/)
+- [📝 Flowbite with Vue guide](https://flowbite.com/docs/getting-started/vue/)
+- [📝 Flowbite with Nuxt.js guide](https://flowbite.com/docs/getting-started/nuxt-js/)
+- [📝 Flowbite with Svelte guide](https://flowbite.com/docs/getting-started/svelte/)
+
+### Back-end Frameworks
+
+Flowbite has a great integration with most of the back-end frameworks because it relies on vanilla JavaScript:
+
+- [📚 Using Flowbite with Laravel](https://flowbite.com/docs/getting-started/laravel/)
+- [🚊 Using Flowbite with Ruby on Rails 7](https://flowbite.com/docs/getting-started/rails/)
+- [🐸 Using Flowbite with Django](https://flowbite.com/docs/getting-started/django/)
+- [🌶 Using Flowbite with Flask](https://flowbite.com/docs/getting-started/flask/)
 
 ## File Structure
+
 Within the download you'll find the following directories and files:
 
 ```
-NextJS Argon Dashboard
+Flowbite Admin Dashboard
 .
-├── CHANGELOG.md
-├── ISSUE_TEMPLATE.md
-├── LICENSE.md
+├── LICENSE
 ├── README.md
-├── Documentation
-│   └── documentation.html
-├── assets
-│   ├── css
-│   │   ├── nextjs-argon-dashboard.css
-│   │   ├── nextjs-argon-dashboard.css.map
-│   │   └── nextjs-argon-dashboard.min.css
-│   ├── fonts
-│   ├── img
-│   │   ├── brand
-│   │   ├── icons
-│   │   │   └── common
-│   │   └── theme
-│   ├── plugins
-│   │   └── nucleo
-│   │       ├── css
-│   │       │   ├── nucleo-svg.css
-│   │       │   └── nucleo.css
-│   │       └── fonts
-│   └── scss
-│       ├── argon-dashboard
-│       │   ├── bootstrap
-│       │   │   ├── mixins
-│       │   │   └── utilities
-│       │   ├── custom
-│       │   │   ├── alerts
-│       │   │   ├── avatars
-│       │   │   ├── badges
-│       │   │   ├── buttons
-│       │   │   ├── cards
-│       │   │   ├── charts
-│       │   │   ├── close
-│       │   │   ├── custom-forms
-│       │   │   ├── dropdowns
-│       │   │   ├── footers
-│       │   │   ├── forms
-│       │   │   ├── headers
-│       │   │   ├── icons
-│       │   │   ├── list-groups
-│       │   │   ├── maps
-│       │   │   ├── masks
-│       │   │   ├── mixins
-│       │   │   ├── modals
-│       │   │   ├── navbars
-│       │   │   ├── navs
-│       │   │   ├── paginations
-│       │   │   ├── popovers
-│       │   │   ├── progresses
-│       │   │   ├── separators
-│       │   │   ├── tables
-│       │   │   ├── type
-│       │   │   ├── utilities
-│       │   │   └── vendors
-│       │   └── docs
-│       ├── nextjs-argon-dashboard.scss
-│       └── react
-│           ├── bootstrap
-│           ├── plugins
-│           └── react-differences.scss
-├── components
-│   ├── Footers
-│   │   ├── AdminFooter.js
-│   │   └── AuthFooter.js
-│   ├── Headers
-│   │   ├── Header.js
-│   │   └── UserHeader.js
-│   ├── Navbars
-│   │   ├── AdminNavbar.js
-│   │   └── AuthNavbar.js
-│   ├── PageChange
-│   │   └── PageChange.js
-│   └── Sidebar
-│       └── Sidebar.js
+├── config.yml
+├── content
+├── data
 ├── layouts
-│   ├── Admin.js
-│   └── Auth.js
-├── pages
-│   ├── 404.js
-│   ├── _app.js
-│   ├── _document.js
-│   ├── _error.js
-│   ├── admin
-│   │   ├── dashboard.js
-│   │   ├── icons.js
-│   │   ├── maps.js
-│   │   ├── profile.js
-│   │   └── tables.js
-│   ├── auth
-│   │   ├── login.js
-│   │   └── register.js
-│   └── index.js
-├── variables
-│   └── charts.js
-├── routes.js
-├── next.config.js
-└── package.json
-
+├── node_modules
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── resources
+├── src
+├── static
+├── tailwind.config.js
+├── webpack.config.js
+└── yarn.lock
 ```
-
 
 ## Browser Support
 
 At present, we officially aim to support the last two versions of the following browsers:
 
-<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/chrome-logo.png?raw=true" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/firefox-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/edge-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/safari-logo.png" width="64" height="64"> <img src="https://raw.githubusercontent.com/creativetimofficial/public-assets/master/logos/opera-logo.png" width="64" height="64">
-
-
+<img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/chrome.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/firefox.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/edge.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/safari.png" width="64" height="64"> <img src="https://s3.amazonaws.com/creativetim_bucket/github/browser/opera.png" width="64" height="64">
 
 ## Resources
-- Demo: <https://demos.creative-tim.com/nextjs-argon-dashboard/admin/dashboard?ref=njsad-github-readme>
-- Download Page: <https://www.creative-tim.com/product/nextjs-argon-dashboard?ref=njsad-github-readme>
-- Documentation: <https://www.creative-tim.com/learning-lab/nextjs/overview/argon-dashboard?ref=njsad-github-readme>
-- License Agreement: <https://www.creative-tim.com/license?ref=njsad-github-readme>
-- Support: <https://www.creative-tim.com/contact-us?ref=njsad-github-readme>
-- Issues: [Github Issues Page](https://github.com/creativetimofficial/nextjs-argon-dashboard/issues?ref=creativetim)
 
-### PRO Versions
-
-[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/nextjs.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/nextjs-argon-dashboard-pro?ref=njsad-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/nodejs-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-pro-nodejs?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-pro-react?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/angular-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-pro-angular?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-native-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-pro-react-native?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/vue-argon-dashboard-pro?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/laravel_logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-pro-laravel?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/bootstrap-logo.png?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-pro?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/bootstrap-vue-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/bootstrap-vue-argon-dashboard-pro?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/nuxt.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/nuxt-argon-dashboard-pro?ref=njsad-github-readme)[<img style="background:white" src="https://github.com/creativetimofficial/public-assets/blob/master/logos/svelte.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-dashboard-pro-svelte?ref=njsad-github-readme)
-
-
-
-| NextJS | NodeJS | React  | Angular  | VueJS |
-| --- | --- | --- | --- | --- |
-| [![NextJS Argon Dashboard PRO](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/nextjs-argon-dashboard-pro/nextjs-argon-dashboard-pro.jpg)](https://www.creative-tim.com/product/nextjs-argon-dashboard-pro) | [![Argon Dashboard PRO Nodejs](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro-nodejs/argon-dashboard-pro-nodejs.jpg)](https://www.creative-tim.com/product/argon-dashboard-pro-nodejs) | [![Argon Dashboard PRO React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro-react/argon-dashboard-pro-react.jpg)](https://www.creative-tim.com/product/argon-dashboard-pro-react) | [![Argon Dashboard PRO Angular](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro-angular/opt_adp_angular_thumbnail.jpg)](https://www.creative-tim.com/product/argon-dashboard-pro-angular) | [![Vue Argon Dashboard PRO](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-argon-dashboard-pro/vue-argon-dashboard-pro.jpg)](https://www.creative-tim.com/product/vue-argon-dashboard-pro) |
-
-| React Native | Laravel | Bootstrap  | BootstrapVue  | Nuxt  | Svelte  |
-| --- | --- | --- | --- | --- | --- |
-| [![Argon PRO React Native](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-pro-react-native/argp-rn-thumbnail.jpg)](https://www.creative-tim.com/product/argon-pro-react-native) | [![Argon Dashboard PRO Laravel](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro-laravel/argon-dashboard-pro-laravel.jpg)](https://www.creative-tim.com/product/argon-dashboard-pro-laravel) | [![Argon Dashboard PRO](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro/argon-dashboard-pro.jpg)](https://www.creative-tim.com/product/argon-dashboard-pro) | [![BootstrapVue Argon Dashboard PRO](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/bootstrap-vue-argon-dashboard-pro/opt_badp_thumbnail.jpg)](https://www.creative-tim.com/product/bootstrap-vue-argon-dashboard-pro) | [![Nuxt Argon Dashboard PRO](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/nuxt-argon-dashboard-pro/nuxt-argon-dashboard-pro.jpg)](https://www.creative-tim.com/product/nuxt-argon-dashboard-pro) | [![Nuxt Argon Dashboard PRO](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/argon-dashboard-pro-svelte/argon-dashboard-pro-svelte.jpg)](https://www.creative-tim.com/product/argon-dashboard-pro-svelte) |
-
-### Kit Versions
-
-#### FREE Kit Versions
-
-[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-design-system?ref=njsad-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/angular-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-design-system-angular?ref=njsad-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-design-system-react?ref=njsad-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/vue-argon-design-system?ref=njsad-github-readme)
-
-| HTML | Angular | React  | VueJS  |
-| --- | --- | --- | --- |
-| [![Argon Design System PRO HTML](https://github.com/creativetimofficial/public-assets/blob/master/argon-design-system/argon-design-system.jpg?raw=true)](https://www.creative-tim.com/product/argon-design-system?ref=njsad-github-readme)  | [![Argon Design System PRO Angular](https://github.com/creativetimofficial/public-assets/blob/master/argon-design-system-angular/argon-design-system-angular.jpg?raw=true)](https://www.creative-tim.com/product/argon-design-system-angular?ref=njsad-github-readme)  | [![Argon Design System PRO React](https://github.com/creativetimofficial/public-assets/blob/master/argon-design-system-react/argon-design-system-react.jpg?raw=true)](https://www.creative-tim.com/product/argon-design-system-react?ref=njsad-github-readme)  | [![Argon Design System PRO React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-argon-design-system/vue-argon-design-system.jpg)](https://www.creative-tim.com/product/vue-argon-design-system?ref=njsad-github-readme)|
-
-#### PRO Kit Versions
-
-[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/html-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-design-system-pro?ref=njsad-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/angular-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-design-system-pro-angular?ref=njsad-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/react-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/argon-design-system-pro-react?ref=njsad-github-readme)[<img src="https://github.com/creativetimofficial/public-assets/blob/master/logos/vue-logo.jpg?raw=true" width="60" height="60" />](https://www.creative-tim.com/product/vue-argon-design-system-pro?ref=njsad-github-readme)
-
-| HTML | Angular | React  | VueJS  |
-| --- | --- | --- | --- |
-| [![Argon Design System PRO HTML](https://github.com/creativetimofficial/public-assets/blob/master/argon-design-system-pro/argon-design-system-pro.jpg?raw=true)](https://www.creative-tim.com/product/argon-design-system-pro?ref=njsad-github-readme)  | [![Argon Design System PRO Angular](https://github.com/creativetimofficial/public-assets/blob/master/argon-design-system-pro-angular/argon-design-system-pro-angular.jpg?raw=true)](https://www.creative-tim.com/product/argon-design-system-pro-angular?ref=njsad-github-readme)  | [![Argon Design System PRO React](https://github.com/creativetimofficial/public-assets/blob/master/argon-design-system-pro-react/argon-design-system-pro-react.jpg?raw=true)](https://www.creative-tim.com/product/argon-design-system-pro-react?ref=njsad-github-readme)  | [![Argon Design System PRO React](https://raw.githubusercontent.com/creativetimofficial/public-assets/master/vue-argon-design-system-pro/opt_adsp_vue_thumbnail.jpg)](https://www.creative-tim.com/product/vue-argon-design-system-pro?ref=njsad-github-readme)|
+- Live preview: <https://flowbite-admin-dashboard.vercel.app/>
+- Flowbite documentation: <https://flowbite.com/docs/getting-started/introduction/>
+- Tailwind CSS documentation: <https://tailwindcss.com/>
+- License Agreement: <https://flowbite.com/docs/getting-started/license/>
+- Issues: [Github Issues Page](https://github.com/themesberg/flowbite-admin-dashboard/issues)
 
 ## Reporting Issues
 
-We use GitHub Issues as the official bug tracker for the Material Kit. Here are some advices for our users that want to report an issue:
+We use GitHub Issues as the official bug tracker for Flowbite Admin Dashboard. Here are some advices for our users that want to report an issue:
 
-1. Make sure that you are using the latest version of the Material Kit. Check the CHANGELOG from your dashboard on our [website](https://www.creative-tim.com/?ref=njsad-github-readme).
+1. Make sure that you are using the latest version of Flowbite Admin Dashboard. Check the CHANGELOG from your dashboard on the [GitHub releases page](https://github.com/themesberg/flowbite-admin-dashboard/releases).
 2. Providing us reproducible steps for the issue will shorten the time it takes for it to be fixed.
 3. Some issues may be browser specific, so specifying in what browser you encountered the issue might help.
 
+## Technical Support or Questions
+
+If you have questions or need help integrating the product please [contact us](https://flowbite.com/contact/) instead of opening an issue.
+
 ## Licensing
 
-- Copyright 2021 Creative Tim (https://www.creative-tim.com/?ref=njsad-github-readme)
-
-- Licensed under MIT (https://github.com/creativetimofficial/nextjs-argon-dashboard/blob/master/LICENSE.md?ref=creativetim)
+- Copyright 2019-2023 Bergside Inc. (https://flowbite.com)
+- Open-source under the [MIT License](https://github.com/themesberg/flowbite-admin-dashboard/blob/main/LICENSE)
 
 ## Useful Links
 
-- [Tutorials](https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w?ref=creativetim)
-- [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=njsad-github-readme) (earn money)
-- [Blog Creative Tim](http://blog.creative-tim.com/?ref=njsad-github-readme)
-- [Free Products](https://www.creative-tim.com/bootstrap-themes/free?ref=njsad-github-readme) from Creative Tim
-- [Premium Products](https://www.creative-tim.com/bootstrap-themes/premium?ref=njsad-github-readme) from Creative Tim
-- [React Products](https://www.creative-tim.com/bootstrap-themes/react-themes?ref=njsad-github-readme) from Creative Tim
-- [Angular Products](https://www.creative-tim.com/bootstrap-themes/angular-themes?ref=njsad-github-readme) from Creative Tim
-- [VueJS Products](https://www.creative-tim.com/bootstrap-themes/vuejs-themes?ref=njsad-github-readme) from Creative Tim
-- [More products](https://www.creative-tim.com/bootstrap-themes?ref=njsad-github-readme) from Creative Tim
-- Check our Bundles [here](https://www.creative-tim.com/bundles?ref=njsad-github-readme)
+- 📚 [Flowbite Library](https://flowbite.com/) - Open-source components built with Tailwind CSS
+- 🎨 [Flowbite Figma](https://flowbite.com/figma/) - Design system built for Figma
+- 🧱 [Flowbite Blocks](https://flowbite.com/blocks/) - Building sections for website and applications
+- 💎 [Flowbite Pro](https://flowbite.com/pro/) - A larger collection of the open-source version of the latter three
 
-### Social Media
+## Authors
 
-Twitter: <https://twitter.com/CreativeTim?ref=creativetim>
-
-Facebook: <https://www.facebook.com/CreativeTim?ref=creativetim>
-
-Dribbble: <https://dribbble.com/creativetim?ref=creativetim>
-
-Instagram: <https://www.instagram.com/CreativeTimOfficial?ref=creativetim>
+- [Zoltán Szőgyényi](https://twitter.com/zoltanszogyenyi)
+- [Robert Tanislav](https://twitter.com/roberttanislav)
