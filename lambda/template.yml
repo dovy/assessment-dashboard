@@ -1,0 +1,55 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: Lambda Application to run queries on Athena and check S3 for mismatches
+
+Globals:
+  Function:
+    Timeout: 120 # Increased timeout for processing
+
+Resources:
+  MyLambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: app.lambda_handler
+      Runtime: python3.8
+      CodeUri: ./src
+      Environment:
+        Variables:
+          ATHENA_DATABASE: 'assessment'
+          ATHENA_WORKGROUP: 'centralize'
+          RESOURCE_NAME: 'assessment'
+          ATHENA_TABLE: 'application_logs'
+          S3_BUCKET_NAME: 'your-s3-bucket-name'
+          S3_PREFIX: 'centralized'
+          REGION: 'your-region'
+          ACCOUNT_ID: 'your-account-id'
+      Events:
+        HttpRequest:
+          Type: Api
+          Properties:
+            Path: /
+            Method: get
+        HttpClientRequest:
+          Type: Api
+          Properties:
+            Path: /client
+            Method: get
+        ClientRequest:
+          Type: Api
+          Properties:
+            Path: /api-all
+            Method: get
+        DrilldownRequest:
+          Type: Api
+          Properties:
+            Path: /api-client
+            Method: get
+      Policies:
+        - AWSLambdaBasicExecutionRole
+        - Version: '2012-10-17'
+          Statement:
+            - Effect: "Allow"
+              Action:
+                - "s3:*"
+                - "athena:*"
+              Resource: "*"
