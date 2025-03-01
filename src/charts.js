@@ -138,15 +138,15 @@ const getMainChartOptions = () => {
     };
 }
 
-if (document.getElementById('main-chart')) {
-    const chart = new ApexCharts(document.getElementById('main-chart'), getMainChartOptions());
-    chart.render();
+// if (document.getElementById('main-chart')) {
+//     const chart = new ApexCharts(document.getElementById('main-chart'), getMainChartOptions());
+//     chart.render();
 
-    // init again when toggling dark mode
-    document.addEventListener('dark-mode', function () {
-        chart.updateOptions(getMainChartOptions());
-    });
-}
+//     // init again when toggling dark mode
+//     document.addEventListener('dark-mode', function () {
+//         chart.updateOptions(getMainChartOptions());
+//     });
+// }
 
 if (document.getElementById('new-products-chart')) {
     const options = {
