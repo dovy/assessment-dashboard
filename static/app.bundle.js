@@ -62,6 +62,17 @@ eval("const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-ico
 
 /***/ }),
 
+/***/ "./src/dynamic.js":
+/*!************************!*\
+  !*** ./src/dynamic.js ***!
+  \************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n\r\nasync function handleIndexPage () {\r\n  // const res = await axios.get('https://4apz632vpan4f5u2unyg75kury0jvrzm.lambda-url.us-east-1.on.aws/?json=1');\r\n  // console.log(res.data);\r\n  const data = [{\"avg_duration\":\"181.86266152064005\",\"process\":\"lambda-profile\",\"aws_account_id\":\"122610477593\",\"aws_region\":\"us-east-1\",\"count\":\"3\",\"latest_timestamp\":\"2025-02-28 14:09:57.131\",\"client_name\":\"Example Corp\"},{\"avg_duration\":\"23.995896339416504\",\"process\":\"lambda-stage\",\"aws_account_id\":\"122610477593\",\"aws_region\":\"us-east-1\",\"count\":\"4\",\"latest_timestamp\":\"2025-02-28 14:04:55.395\",\"client_name\":\"Example Corp\"}];\r\n  const template = document.getElementById('clientRowTemplate').innerHTML;\r\n  const tbody = document.querySelector('#clientTable tbody');\r\n\r\n  data.forEach(item => {\r\n      let row = template;\r\n      row = row.replaceAll('{{client_name}}', item.client_name);\r\n      row = row.replace('{{process}}', item.process);\r\n      row = row.replace('{{avg_duration}}', item.avg_duration);\r\n      row = row.replace('{{aws_region}}', item.aws_region);\r\n      row = row.replace('{{aws_account_id}}', item.aws_account_id);\r\n      row = row.replace('{{count}}', item.count);\r\n      row = row.replace('{{latest_timestamp}}', item.latest_timestamp);\r\n      tbody.insertAdjacentHTML('beforeend', row);\r\n  });\r\n}\r\nasync function init () {\r\n  if (document.getElementById('clientRowTemplate')) handleIndexPage();\r\n  \r\n}\r\ndocument.addEventListener('DOMContentLoaded', init);\r\n\n\n//# sourceURL=webpack://flowbite-admin-dashboard/./src/dynamic.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -69,7 +80,7 @@ eval("const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-ico
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var flowbite_dist_flowbite_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flowbite/dist/flowbite.js */ \"./node_modules/flowbite/dist/flowbite.js\");\n/* harmony import */ var flowbite_dist_flowbite_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flowbite_dist_flowbite_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _sidebar__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./sidebar */ \"./src/sidebar.js\");\n/* harmony import */ var _sidebar__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_sidebar__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _charts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./charts */ \"./src/charts.js\");\n/* harmony import */ var _dark_mode__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./dark-mode */ \"./src/dark-mode.js\");\n/* harmony import */ var _dark_mode__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_dark_mode__WEBPACK_IMPORTED_MODULE_4__);\n\r\n\r\n\r\n\r\n\r\n\r\n// Have the courage to follow your heart and intuition.\r\n\n\n//# sourceURL=webpack://flowbite-admin-dashboard/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var flowbite_dist_flowbite_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flowbite/dist/flowbite.js */ \"./node_modules/flowbite/dist/flowbite.js\");\n/* harmony import */ var flowbite_dist_flowbite_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flowbite_dist_flowbite_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _dynamic__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./dynamic */ \"./src/dynamic.js\");\n/* harmony import */ var _sidebar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./sidebar */ \"./src/sidebar.js\");\n/* harmony import */ var _sidebar__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_sidebar__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _charts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./charts */ \"./src/charts.js\");\n/* harmony import */ var _dark_mode__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./dark-mode */ \"./src/dark-mode.js\");\n/* harmony import */ var _dark_mode__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_dark_mode__WEBPACK_IMPORTED_MODULE_5__);\n\r\n\r\n\r\n\r\n\r\n\r\n\r\n// Have the courage to follow your heart and intuition.\r\n\n\n//# sourceURL=webpack://flowbite-admin-dashboard/./src/index.js?");
 
 /***/ }),
 
