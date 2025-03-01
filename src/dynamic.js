@@ -160,17 +160,102 @@ const getMainChartOptions = (data) => {
   };
 }
 
+const getProductChartOptions = (data) => {
+  return {
+    colors: ['#1A56DB', '#FDBA8C'],
+    series: [
+        {
+            name: 'Seconds',
+            color: '#72bf01',
+            data
+        }
+    ],
+    chart: {
+        type: 'bar',
+        height: 220,
+        fontFamily: 'Inter, sans-serif',
+        foreColor: '#4B5563',
+        toolbar: {
+            show: false
+        }
+    },
+    plotOptions: {
+        bar: {
+            columnWidth: '90%',
+            borderRadius: 3
+        }
+    },
+    tooltip: {
+        shared: false,
+        intersect: false,
+        style: {
+            fontSize: '14px',
+            fontFamily: 'Inter, sans-serif'
+        },
+    },
+    states: {
+        hover: {
+            filter: {
+                type: 'darken',
+                value: 1
+            }
+        }
+    },
+    stroke: {
+        show: true,
+        width: 5,
+        colors: ['transparent']
+    },
+    grid: {
+        show: false
+    },
+    dataLabels: {
+        enabled: true
+    },
+    legend: {
+        show: false
+    },
+    xaxis: {
+        floating: false,
+        labels: {
+            show: true
+        },
+        axisBorder: {
+            show: false
+        },
+        axisTicks: {
+            show: false
+        },
+    },
+    yaxis: {
+        show: true
+    },
+    fill: {
+        opacity: 1
+    }
+};
+}
+
 async function handleDetailPage (clientName) {
   // const res = await axios.get(`https://4apz632vpan4f5u2unyg75kury0jvrzm.lambda-url.us-east-1.on.aws/client?name=${encodeURIComponent(clientName)}&json=1`);
   // const data = res.data;
   const data = {"stats":{"lambda-profile":{"duration":[205.82486653327942,164.18754625320435,175.5755717754364],"avg_duration":181.86266152064005,"latest_hash":"6a5095ebefd1495ea5d98eadef9ad127","count":3,"latest_timestamp":"2025-02-28 14:09:57.131000","latest_target_name":"s3:\/\/122610477593-us-east-1-dev1-examplecorp-processing\/meta\/profile_athena\/banana_20250228_6a5095ebefd1495ea5d98eadef9ad127.csv"},"lambda-stage":{"duration":[4.812428712844849,2.067328453063965,84.43361020088196,4.670217990875244],"avg_duration":23.995896339416504,"latest_hash":"6a5095ebefd1495ea5d98eadef9ad127","count":4,"latest_timestamp":"2025-02-28 14:04:55.395000","latest_target_name":"s3:\/\/122610477593-us-east-1-dev1-examplecorp-processing\/landing\/banana_20250228_6a5095ebefd1495ea5d98eadef9ad127.csv"}},"items":[{"avg_duration":"205.82486653327942","process":"lambda-profile","aws_account_id":"122610477593","aws_region":"us-east-1","file_hash":"5732b53c056240e2a149322cd856300b","target_name":"s3:\/\/122610477593-us-east-1-dev1-examplecorp-processing\/meta\/profile_athena\/francis_test_12_20250227_5732b53c056240e2a149322cd856300b.csv","timestamp_dt":"2025-02-27 22:54:54.129","target_format":"csv"},{"avg_duration":"164.18754625320435","process":"lambda-profile","aws_account_id":"122610477593","aws_region":"us-east-1","file_hash":"e5e3194748464d8eaed4f8e1452854cb","target_name":"s3:\/\/122610477593-us-east-1-dev1-examplecorp-processing\/meta\/profile_athena\/care_credit_sample_20250601_20250227_e5e3194748464d8eaed4f8e1452854cb.csv","timestamp_dt":"2025-02-27 22:35:57.072","target_format":"csv"},{"avg_duration":"175.5755717754364","process":"lambda-profile","aws_account_id":"122610477593","aws_region":"us-east-1","file_hash":"6a5095ebefd1495ea5d98eadef9ad127","target_name":"s3:\/\/122610477593-us-east-1-dev1-examplecorp-processing\/meta\/profile_athena\/banana_20250228_6a5095ebefd1495ea5d98eadef9ad127.csv","timestamp_dt":"2025-02-28 14:09:57.131","target_format":"csv"},{"avg_duration":"4.812428712844849","process":"lambda-stage","aws_account_id":"122610477593","aws_region":"us-east-1","file_hash":"e5e3194748464d8eaed4f8e1452854cb","target_name":"s3:\/\/122610477593-us-east-1-dev1-examplecorp-processing\/landing\/care_credit_sample_20250601_20250227_e5e3194748464d8eaed4f8e1452854cb.csv","timestamp_dt":"2025-02-27 22:30:24.860","target_format":null},{"avg_duration":"2.067328453063965","process":"lambda-stage","aws_account_id":"122610477593","aws_region":"us-east-1","file_hash":"ce5e5614ff3d4013834051bb9f1fa39e","target_name":"s3:\/\/122610477593-us-east-1-dev1-examplecorp-processing\/landing\/care_credit_sample_20250602_20250227_ce5e5614ff3d4013834051bb9f1fa39e.csv","timestamp_dt":"2025-02-27 22:30:28.160","target_format":null},{"avg_duration":"84.43361020088196","process":"lambda-stage","aws_account_id":"122610477593","aws_region":"us-east-1","file_hash":"5732b53c056240e2a149322cd856300b","target_name":"s3:\/\/122610477593-us-east-1-dev1-examplecorp-processing\/landing\/francis_test_12_20250227_5732b53c056240e2a149322cd856300b.csv","timestamp_dt":"2025-02-27 22:48:42.394","target_format":null},{"avg_duration":"4.670217990875244","process":"lambda-stage","aws_account_id":"122610477593","aws_region":"us-east-1","file_hash":"6a5095ebefd1495ea5d98eadef9ad127","target_name":"s3:\/\/122610477593-us-east-1-dev1-examplecorp-processing\/landing\/banana_20250228_6a5095ebefd1495ea5d98eadef9ad127.csv","timestamp_dt":"2025-02-28 14:04:55.395","target_format":null}]};
   const lambdaProfileData = data.stats['lambda-profile'].duration;
   const mainChartOptions = getMainChartOptions(lambdaProfileData);
-  console.log('mainChartOptions', mainChartOptions);
   const mainChart = new ApexCharts(document.getElementById('main-chart'), mainChartOptions);
   mainChart.render();
+
+  const staticData = Object.keys(data.stats).map(key => {
+    return {x: key, y: data.stats[key].avg_duration}
+  });
+  const staticOptions = getProductChartOptions(staticData);
+  const statsChart = new ApexCharts(document.getElementById('stats-avg-duration-chart'), staticOptions);
+  statsChart.render();
+
+
   document.addEventListener('dark-mode', function () {
-    mainChart.updateOptions(getMainChartOptions());
+    mainChart.updateOptions(getMainChartOptions(lambdaProfileData));
+    statsChart.updateOptions(getProductChartOptions(staticData));
   });
 }
 async function init () {
