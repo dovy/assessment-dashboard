@@ -43,7 +43,7 @@ footer: true
         <!-- Card header -->
         <div class="items-center justify-between lg:flex">
             <div class="mb-4 lg:mb-0">
-                <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Clients</h3>
+                <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Items</h3>
             </div>
         </div>
         <!-- Table -->
@@ -51,105 +51,42 @@ footer: true
             <div class="overflow-x-auto rounded-lg">
                 <div class="inline-block min-w-full align-middle">
                     <div class="overflow-hidden shadow sm:rounded-lg">
-                        <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-600">
+                        <table id="itemTable" class="min-w-full divide-y divide-gray-200 dark:divide-gray-600">
                             <thead class="bg-gray-50 dark:bg-gray-700">
                             <tr>
                                 <th scope="col"
                                     class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
-                                    File Hash
+                                    Process
                                 </th>
                                 <th scope="col"
                                     class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
-                                    Last Activity
+                                    Average Duration
                                 </th>
 
                                 <th scope="col"
                                     class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
-                                    Stage
+                                    AWS Account ID
                                 </th>
                                 <th scope="col"
                                     class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
-                                    Profiling
+                                    AWS Region
                                 </th>
                                 <th scope="col"
                                     class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
-                                    Normalize
+                                    Timestamp
                                 </th>
 
                                 <th scope="col"
                                     class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
                                     FP Status
                                 </th>
-
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    File
+                                </th>
                             </tr>
                             </thead>
                             <tbody class="bg-white dark:bg-gray-800">
-                            <tr>
-                                <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
-                                    <span class="font-semibold">e5e3194748464d8eaed4f8e1452854cb</span>
-                                </td>
-                                <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                    2025-02-27 22:35:57.072
-                                </td>
-                                <td class="p-4 font-normal text-gray-900 whitespace-nowrap dark:text-white">
-                                    <a href="" type="button" target="_blank"
-                                       class="ml-4 ">
-                                        <img src="/external-link.svg" style="height:20px;" alt="">
-                                    </a>
-                                </td>
-                                <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
-                                    <a href="" type="button" target="_blank"
-                                       class="mb-4 sm:mb-0 mr-4 inline-flex text-green-200 items-center text-gray-900border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm p-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
-                                        <img src="/external-link.svg" style="height:16px;" alt="">
-                                    </a>
-                                </td>
-                                <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
-                                    <a href="" type="button" target="_blank"
-                                       class="mb-4 sm:mb-0 mr-4 inline-flex text-green-200 items-center text-gray-900border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm p-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
-                                        <img src="/external-link.svg" style="height:20px;" alt="">
-                                    </a>
-                                </td>
-                                <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
-                                    <a href="" type="button" target="_blank"
-                                       class="mb-4 sm:mb-0 mr-4 inline-flex text-green-200 items-center text-gray-900border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm p-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
-                                        <img src="/external-link.svg" style="height:20px;" alt="">
-                                    </a>
-                                </td>
-
-                            </tr>
-                            <tr>
-                                <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
-                                    <span class="font-semibold">5732b53c056240e2a149322cd856300b</span>
-                                </td>
-                                <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
-                                    2025-02-27 22:54:54.129
-                                </td>
-                                <td class="p-4 font-normal text-gray-900 whitespace-nowrap dark:text-white">
-                                    <a href="" type="button" target="_blank"
-                                       class="ml-4 ">
-                                        <img src="/external-link.svg" style="height:20px;" alt="">
-                                    </a>
-                                </td>
-                                <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
-                                    <a href="" type="button" target="_blank"
-                                       class="mb-4 sm:mb-0 mr-4 inline-flex text-green-200 items-center text-gray-900border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm p-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
-                                        <img src="/external-link.svg" class="svg" style="height:16px;" alt="">
-                                    </a>
-                                </td>
-                                <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
-                                    <a href="" type="button" target="_blank"
-                                       class="mb-4 sm:mb-0 mr-4 inline-flex text-green-200 items-center text-gray-900border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm p-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
-                                        <img src="/external-link.svg" style="height:20px;" alt="">
-                                    </a>
-                                </td>
-                                <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
-                                    <a href="" type="button" target="_blank"
-                                       class="mb-4 sm:mb-0 mr-4 inline-flex text-green-200 items-center text-gray-900border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm p-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
-                                        <img src="/external-link.svg" style="height:20px;" alt="">
-                                    </a>
-                                </td>
-
-                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -158,3 +95,31 @@ footer: true
         </div>
     </div>
 </div>
+
+
+<script type="template" id="itemRowTemplate">
+    <tr>
+        <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
+            <span class="font-semibold">{{process}}</span>
+        </td>
+        <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
+            {{avg_duration}}
+        </td>
+        <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
+            {{aws_account_id}}
+        </td>
+        <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
+            {{aws_region}}
+        </td>
+        <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
+            {{timestamp_dt}}
+        </td>
+        <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
+            <a href="#" type="button" target="_blank"
+               class="mb-4 sm:mb-0 mr-4 inline-flex text-green-200 items-center text-gray-900 border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm p-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
+                <img src="/external-link.svg" class="svg" style="height:16px;" alt="" />
+            </a>
+        </td>
+    </tr>
+
+</script>

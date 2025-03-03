@@ -160,7 +160,7 @@ const getMainChartOptions = (data) => {
   };
 }
 
-const getProductChartOptions = (data) => {
+const getBarChartOptions = (data) => {
   return {
     colors: ['#1A56DB', '#FDBA8C'],
     series: [
@@ -248,14 +248,26 @@ async function handleDetailPage (clientName) {
   const staticData = Object.keys(data.stats).map(key => {
     return {x: key, y: data.stats[key].avg_duration}
   });
-  const staticOptions = getProductChartOptions(staticData);
+  const staticOptions = getBarChartOptions(staticData);
   const statsChart = new ApexCharts(document.getElementById('stats-avg-duration-chart'), staticOptions);
   statsChart.render();
 
+  const template = document.getElementById('itemRowTemplate').innerHTML;
+  const tbody = document.querySelector('#itemTable tbody');
+
+  data.items.forEach(item => {
+      let row = template;
+      row = row.replace('{{process}}', item.process);
+      row = row.replace('{{avg_duration}}', item.avg_duration);
+      row = row.replace('{{aws_region}}', item.aws_region);
+      row = row.replace('{{aws_account_id}}', item.aws_account_id);
+      row = row.replace('{{timestamp_dt}}', item.timestamp_dt);
+      tbody.insertAdjacentHTML('beforeend', row);
+  });
 
   document.addEventListener('dark-mode', function () {
     mainChart.updateOptions(getMainChartOptions(lambdaProfileData));
-    statsChart.updateOptions(getProductChartOptions(staticData));
+    statsChart.updateOptions(getBarChartOptions(staticData));
   });
 }
 async function init () {
