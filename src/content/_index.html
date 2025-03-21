@@ -1,0 +1,97 @@
+---
+title: FirstParty Assessments
+layout: dashboard
+group: layouts
+footer: true
+---
+
+<div class="px-4 pt-6 2xl:px-0">
+
+    <div class="p-4 mt-5 bg-white border border-gray-200 rounded-lg shadow-sm dark:border-gray-700 sm:p-6 dark:bg-gray-800">
+        <!-- Card header -->
+        <div class="items-center justify-between lg:flex">
+            <div class="mb-4 lg:mb-0">
+                <h3 class="mb-2 text-xl font-bold text-gray-900 dark:text-white">Clients</h3>
+            </div>
+        </div>
+        <!-- Table -->
+        <div class="flex flex-col mt-6">
+            <div class="overflow-x-auto rounded-lg">
+                <div class="inline-block min-w-full align-middle">
+                    <div class="overflow-hidden shadow sm:rounded-lg">
+                        <table id="clientTable" class="min-w-full divide-y divide-gray-200 dark:divide-gray-600">
+                            <thead class="bg-gray-50 dark:bg-gray-700">
+                            <tr>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    Client Name
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    Avg. Duration
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    AWS Account ID
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    AWS Region
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    File Count
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    Last Execution
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    Client Name
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody class="bg-white dark:bg-gray-800">
+                            
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="template" id="clientRowTemplate">
+    <tr>
+        <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
+            <span class="font-semibold">{{client_name}}</span>
+        </td>
+        <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
+            {{avg_duration}}
+        </td>
+        <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
+            {{aws_account_id}}
+        </td>
+        <td class="p-4 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
+            {{aws_region}}
+        </td>
+        <td class="p-4 items-center p-4 space-x-2 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
+            {{count}}
+        </td>
+        <td class="p-4 items-center p-4 space-x-2 text-sm font-normal text-gray-500 whitespace-nowrap dark:text-gray-400">
+            {{latest_timestamp}}
+        </td>
+        <td class="inline-flex p-4 whitespace-nowrap" style="width:65px;">
+            <a href="/client?name={{client_name}}" type="button"
+                    class="mb-4 sm:mb-0 mr-4 inline-flex items-center text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm px-4 py-2.5 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
+                Details
+            </a>
+        </td>
+    </tr>
+
+</script>

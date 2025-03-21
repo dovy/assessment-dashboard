@@ -1,0 +1,26 @@
+languageCode:           "en"
+title:                  "FirstParty Assessment Dashboard"
+# baseURL:                "http://localhost:1313"
+baseURL:                "/"
+enableInlineShortcodes: true
+canonifyURLs: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe:           true
+  highlight:
+    noClasses:          false
+    style:              colorful
+  tableOfContents:
+    startLevel:         2
+    endLevel:           6
+
+buildDrafts:            true
+buildFuture:            true
+
+enableRobotsTXT:        true
+metaDataFormat:         "yaml"
+disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
+
+publishDir:             "public"
