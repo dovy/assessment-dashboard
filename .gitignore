@@ -4,3 +4,4 @@ package-lock.json
 /build
 /.next
 /_gh_pages
+src/node_modules
