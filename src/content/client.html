@@ -56,6 +56,14 @@ footer: true
                             <tr>
                                 <th scope="col"
                                     class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    Latest Timestamp
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
+                                    File Hash
+                                </th>
+                                <th scope="col"
+                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
                                     Process
                                 </th>
                                 <th scope="col"
@@ -65,24 +73,11 @@ footer: true
 
                                 <th scope="col"
                                     class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
-                                    AWS Account ID
+                                    AWS Account
                                 </th>
                                 <th scope="col"
                                     class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
-                                    AWS Region
-                                </th>
-                                <th scope="col"
-                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
-                                    Timestamp
-                                </th>
-
-                                <th scope="col"
-                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
-                                    FP Status
-                                </th>
-                                <th scope="col"
-                                    class="p-4 text-xs font-medium tracking-wider text-left text-gray-500 uppercase dark:text-white">
-                                    File
+                                    Last File
                                 </th>
                             </tr>
                             </thead>
@@ -96,9 +91,14 @@ footer: true
     </div>
 </div>
 
-
 <script type="template" id="itemRowTemplate">
     <tr>
+        <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
+            {{timestamp_dt}}
+        </td>
+        <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
+            <span>{{file_hash}}</span>
+        </td>
         <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
             <span class="font-semibold">{{process}}</span>
         </td>
@@ -106,18 +106,15 @@ footer: true
             {{avg_duration}}
         </td>
         <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
-            {{aws_account_id}}
+            <a href="https://{{aws_account_id}}.signin.aws.amazon.com/console" type="button" target="_blank"
+               class="mb-4 sm:mb-0 mr-4 inline-flex text-green-200 items-center text-gray-900 border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm p-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"> {{aws_account_id}} [{{aws_region}}] &nbsp;
+                 <img src="/external-link.svg" class="svg" style="height:16px;" alt="" />
+            </a>
         </td>
         <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
-            {{aws_region}}
-        </td>
-        <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
-            {{timestamp_dt}}
-        </td>
-        <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
-            <a href="#" type="button" target="_blank"
+            <a href="{{target_name}}" type="button" target="_blank"
                class="mb-4 sm:mb-0 mr-4 inline-flex text-green-200 items-center text-gray-900 border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm p-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
-                <img src="/external-link.svg" class="svg" style="height:16px;" alt="" />
+                 <img src="/external-link.svg" class="svg" style="height:16px;" alt="" />
             </a>
         </td>
     </tr>

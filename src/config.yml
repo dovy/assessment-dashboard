@@ -1,6 +1,5 @@
 languageCode:           "en"
 title:                  "FirstParty Assessment Dashboard"
-# baseURL:                "http://localhost:1313"
 baseURL:                "/"
 enableInlineShortcodes: true
 canonifyURLs: true
@@ -23,4 +22,4 @@ enableRobotsTXT:        true
 metaDataFormat:         "yaml"
 disableKinds:           ["404", "taxonomy", "taxonomyTerm", "RSS"]
 
-publishDir:             "public"
+publishDir:             "_public"

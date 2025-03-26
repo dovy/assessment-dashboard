@@ -2,38 +2,45 @@ import ApexCharts from 'apexcharts';
 import axios from 'axios';
 
 async function handleIndexPage() {
-    const res = await axios.get('/api/all');
-    const data = res.data;
+    let data = {};
+    try {
+        const res = await axios.get('/api/all');
+        data = res.data;
+    } catch (error) {
+        console.log('Failed fetching data, using local data instead.');
+        data = [{
+            "avg_duration": "181.86266152064005",
+            "process": "lambda-profile",
+            "aws_account_id": "122610477593",
+            "aws_region": "us-east-1",
+            "count": "3",
+            "latest_timestamp": "2025-02-28 14:09:57.131",
+            "client_name": "Example Corp"
+        }, {
+            "avg_duration": "23.995896339416504",
+            "process": "lambda-stage",
+            "aws_account_id": "122610477593",
+            "aws_region": "us-east-1",
+            "count": "4",
+            "latest_timestamp": "2025-02-28 14:04:55.395",
+            "client_name": "Example Corp"
+        }];
+    }
 
-    // const data = [{
-    //     "avg_duration": "181.86266152064005",
-    //     "process": "lambda-profile",
-    //     "aws_account_id": "122610477593",
-    //     "aws_region": "us-east-1",
-    //     "count": "3",
-    //     "latest_timestamp": "2025-02-28 14:09:57.131",
-    //     "client_name": "Example Corp"
-    // }, {
-    //     "avg_duration": "23.995896339416504",
-    //     "process": "lambda-stage",
-    //     "aws_account_id": "122610477593",
-    //     "aws_region": "us-east-1",
-    //     "count": "4",
-    //     "latest_timestamp": "2025-02-28 14:04:55.395",
-    //     "client_name": "Example Corp"
-    // }];
     const template = document.getElementById('clientRowTemplate').innerHTML;
     const tbody = document.querySelector('#clientTable tbody');
 
     data.forEach(item => {
         let row = template;
         row = row.replaceAll('{{client_name}}', item.client_name);
-        row = row.replace('{{process}}', item.process);
-        row = row.replace('{{avg_duration}}', parseFloat(item.avg_duration).toFixed(1));
-        row = row.replace('{{aws_region}}', item.aws_region);
-        row = row.replace('{{aws_account_id}}', item.aws_account_id);
-        row = row.replace('{{count}}', item.count);
-        row = row.replace('{{latest_timestamp}}', item.latest_timestamp);
+        row = row.replaceAll('{{aws_account_id}}', item.aws_account_id);
+        row = row.replaceAll('{{file_hash}}', item.file_hash);
+        row = row.replaceAll('{{process}}', item.process);
+        row = row.replaceAll('{{avg_duration}}', parseFloat(item.avg_duration).toFixed(1).toString()+'s');
+        row = row.replaceAll('{{aws_region}}', item.aws_region);
+        row = row.replaceAll('{{aws_account_id}}', item.aws_account_id);
+        row = row.replaceAll('{{count}}', item.count);
+        row = row.replaceAll('{{latest_timestamp}}', item.latest_timestamp);
         tbody.insertAdjacentHTML('beforeend', row);
     });
 }
@@ -228,6 +235,7 @@ const getBarChartOptions = (data) => {
         dataLabels: {
             enabled: true
         },
+
         legend: {
             show: false
         },
@@ -244,7 +252,13 @@ const getBarChartOptions = (data) => {
             },
         },
         yaxis: {
-            show: true
+            show: true,
+            labels: {
+                formatter: function (value) {
+
+                    return value;
+                }
+            }
         },
         fill: {
             opacity: 1
@@ -253,22 +267,109 @@ const getBarChartOptions = (data) => {
 }
 
 async function handleDetailPage(clientName) {
-    const res = await axios.get(`/api/client?name=${encodeURIComponent(clientName)}`);
-    const data = res.data;
-    // const None = null;
-    // let str = {"items": [{"avg_duration": "175.5755717754364", "aws_account_id": "122610477593", "aws_region": "us-east-1", "file_hash": "6a5095ebefd1495ea5d98eadef9ad127", "process": "lambda-profile", "target_format": "csv", "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/meta/profile_athena/banana_20250228_6a5095ebefd1495ea5d98eadef9ad127.csv", "timestamp_dt": "2025-02-28 14:09:57.131"}, {"avg_duration": "164.18754625320435", "aws_account_id": "122610477593", "aws_region": "us-east-1", "file_hash": "e5e3194748464d8eaed4f8e1452854cb", "process": "lambda-profile", "target_format": "csv", "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/meta/profile_athena/care_credit_sample_20250601_20250227_e5e3194748464d8eaed4f8e1452854cb.csv", "timestamp_dt": "2025-02-27 22:35:57.072"}, {"avg_duration": "205.82486653327942", "aws_account_id": "122610477593", "aws_region": "us-east-1", "file_hash": "5732b53c056240e2a149322cd856300b", "process": "lambda-profile", "target_format": "csv", "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/meta/profile_athena/francis_test_12_20250227_5732b53c056240e2a149322cd856300b.csv", "timestamp_dt": "2025-02-27 22:54:54.129"}, {"avg_duration": "84.43361020088196", "aws_account_id": "122610477593", "aws_region": "us-east-1", "file_hash": "5732b53c056240e2a149322cd856300b", "process": "lambda-stage", "target_format": None, "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/landing/francis_test_12_20250227_5732b53c056240e2a149322cd856300b.csv", "timestamp_dt": "2025-02-27 22:48:42.394"}, {"avg_duration": "4.812428712844849", "aws_account_id": "122610477593", "aws_region": "us-east-1", "file_hash": "e5e3194748464d8eaed4f8e1452854cb", "process": "lambda-stage", "target_format": None, "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/landing/care_credit_sample_20250601_20250227_e5e3194748464d8eaed4f8e1452854cb.csv", "timestamp_dt": "2025-02-27 22:30:24.860"}, {"avg_duration": "2.067328453063965", "aws_account_id": "122610477593", "aws_region": "us-east-1", "file_hash": "ce5e5614ff3d4013834051bb9f1fa39e", "process": "lambda-stage", "target_format": None, "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/landing/care_credit_sample_20250602_20250227_ce5e5614ff3d4013834051bb9f1fa39e.csv", "timestamp_dt": "2025-02-27 22:30:28.160"}, {"avg_duration": "4.670217990875244", "aws_account_id": "122610477593", "aws_region": "us-east-1", "file_hash": "6a5095ebefd1495ea5d98eadef9ad127", "process": "lambda-stage", "target_format": None, "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/landing/banana_20250228_6a5095ebefd1495ea5d98eadef9ad127.csv", "timestamp_dt": "2025-02-28 14:04:55.395"}], "stats": {"lambda-profile": {"avg_duration": 181.86266152064005, "count": 3, "duration": [175.5755717754364, 164.18754625320435, 205.82486653327942], "files": {}, "latest_hash": "6a5095ebefd1495ea5d98eadef9ad127", "latest_target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/meta/profile_athena/banana_20250228_6a5095ebefd1495ea5d98eadef9ad127.csv", "latest_timestamp": "2025-02-28 14:09:57.131000"}, "lambda-stage": {"avg_duration": 23.995896339416504, "count": 4, "duration": [84.43361020088196, 4.812428712844849, 2.067328453063965, 4.670217990875244], "files": {}, "latest_hash": "6a5095ebefd1495ea5d98eadef9ad127", "latest_target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/landing/banana_20250228_6a5095ebefd1495ea5d98eadef9ad127.csv", "latest_timestamp": "2025-02-28 14:04:55.395000"}}};
-    
-    // let data = str;
-    // console.log('data', data);
-    if (data.stats?.['lambda-profile'].length != 0) {
-        const lambdaProfileData = data.stats?.['lambda-profile'].duration;
+    let data = {};
+    try {
+        const res = await axios.get(`/api/client?name=${encodeURIComponent(clientName)}`);
+        data = res.data;
+    } catch (error) {
+        console.log('Failed fetching data, using local data instead.');
+        data = {
+            "stats": {
+                "lambda-profile": {
+                    "duration": [205.82486653327942, 164.18754625320435, 175.5755717754364],
+                    "avg_duration": 181.86266152064005,
+                    "latest_hash": "6a5095ebefd1495ea5d98eadef9ad127",
+                    "count": 3,
+                    "latest_timestamp": "2025-02-28 14:09:57.131000",
+                    "latest_target_name": "s3:\/\/122610477593-us-east-1-dev1-examplecorp-processing\/meta\/profile_athena\/banana_20250228_6a5095ebefd1495ea5d98eadef9ad127.csv"
+                },
+                "lambda-stage": {
+                    "duration": [4.812428712844849, 2.067328453063965, 84.43361020088196, 4.670217990875244],
+                    "avg_duration": 23.995896339416504,
+                    "latest_hash": "6a5095ebefd1495ea5d98eadef9ad127",
+                    "count": 4,
+                    "latest_timestamp": "2025-02-28 14:04:55.395000",
+                    "latest_target_name": "s3:\/\/122610477593-us-east-1-dev1-examplecorp-processing\/landing\/banana_20250228_6a5095ebefd1495ea5d98eadef9ad127.csv"
+                }
+            },
+            "items": [{
+                "avg_duration": "205.82486653327942",
+                "process": "lambda-profile",
+                "aws_account_id": "122610477593",
+                "aws_region": "us-east-1",
+                "file_hash": "5732b53c056240e2a149322cd856300b",
+                "target_name": "s3:\/\/122610477593-us-east-1-dev1-examplecorp-processing\/meta\/profile_athena\/francis_test_12_20250227_5732b53c056240e2a149322cd856300b.csv",
+                "timestamp_dt": "2025-02-27 22:54:54.129",
+                "target_format": "csv"
+            }, {
+                "avg_duration": "164.18754625320435",
+                "process": "lambda-profile",
+                "aws_account_id": "122610477593",
+                "aws_region": "us-east-1",
+                "file_hash": "e5e3194748464d8eaed4f8e1452854cb",
+                "target_name": "s3:\/\/122610477593-us-east-1-dev1-examplecorp-processing\/meta\/profile_athena\/care_credit_sample_20250601_20250227_e5e3194748464d8eaed4f8e1452854cb.csv",
+                "timestamp_dt": "2025-02-27 22:35:57.072",
+                "target_format": "csv"
+            }, {
+                "avg_duration": "175.5755717754364",
+                "process": "lambda-profile",
+                "aws_account_id": "122610477593",
+                "aws_region": "us-east-1",
+                "file_hash": "6a5095ebefd1495ea5d98eadef9ad127",
+                "target_name": "s3:\/\/122610477593-us-east-1-dev1-examplecorp-processing\/meta\/profile_athena\/banana_20250228_6a5095ebefd1495ea5d98eadef9ad127.csv",
+                "timestamp_dt": "2025-02-28 14:09:57.131",
+                "target_format": "csv"
+            }, {
+                "avg_duration": "4.812428712844849",
+                "process": "lambda-stage",
+                "aws_account_id": "122610477593",
+                "aws_region": "us-east-1",
+                "file_hash": "e5e3194748464d8eaed4f8e1452854cb",
+                "target_name": "s3:\/\/122610477593-us-east-1-dev1-examplecorp-processing\/landing\/care_credit_sample_20250601_20250227_e5e3194748464d8eaed4f8e1452854cb.csv",
+                "timestamp_dt": "2025-02-27 22:30:24.860",
+                "target_format": null
+            }, {
+                "avg_duration": "2.067328453063965",
+                "process": "lambda-stage",
+                "aws_account_id": "122610477593",
+                "aws_region": "us-east-1",
+                "file_hash": "ce5e5614ff3d4013834051bb9f1fa39e",
+                "target_name": "s3:\/\/122610477593-us-east-1-dev1-examplecorp-processing\/landing\/care_credit_sample_20250602_20250227_ce5e5614ff3d4013834051bb9f1fa39e.csv",
+                "timestamp_dt": "2025-02-27 22:30:28.160",
+                "target_format": null
+            }, {
+                "avg_duration": "84.43361020088196",
+                "process": "lambda-stage",
+                "aws_account_id": "122610477593",
+                "aws_region": "us-east-1",
+                "file_hash": "5732b53c056240e2a149322cd856300b",
+                "target_name": "s3:\/\/122610477593-us-east-1-dev1-examplecorp-processing\/landing\/francis_test_12_20250227_5732b53c056240e2a149322cd856300b.csv",
+                "timestamp_dt": "2025-02-27 22:48:42.394",
+                "target_format": null
+            }, {
+                "avg_duration": "4.670217990875244",
+                "process": "lambda-stage",
+                "aws_account_id": "122610477593",
+                "aws_region": "us-east-1",
+                "file_hash": "6a5095ebefd1495ea5d98eadef9ad127",
+                "target_name": "s3:\/\/122610477593-us-east-1-dev1-examplecorp-processing\/landing\/banana_20250228_6a5095ebefd1495ea5d98eadef9ad127.csv",
+                "timestamp_dt": "2025-02-28 14:04:55.395",
+                "target_format": null
+            }]
+        };
+    }
+
+    let lambdaProfileData = {};
+
+    if (data.stats.hasOwnProperty("lambda-profile")) {
+        lambdaProfileData = data.stats['lambda-profile'].duration;
         const mainChartOptions = getMainChartOptions(lambdaProfileData);
         const mainChart = new ApexCharts(document.getElementById('main-chart'), mainChartOptions);
         mainChart.render();
     }
 
     const staticData = Object.keys(data.stats).map(key => {
-        return {x: key, y: data.stats[key].avg_duration}
+        return {x: key, y: parseFloat(data.stats[key].avg_duration).toFixed(1)};
     });
     const staticOptions = getBarChartOptions(staticData);
     const statsChart = new ApexCharts(document.getElementById('stats-avg-duration-chart'), staticOptions);
@@ -279,11 +380,14 @@ async function handleDetailPage(clientName) {
 
     data.items.forEach(item => {
         let row = template;
+        row = row.replace('{{avg_duration}}', parseFloat(item.avg_duration).toFixed(1).toString()+'s');
         row = row.replace('{{process}}', item.process);
-        row = row.replace('{{avg_duration}}', item.avg_duration);
+        row = row.replaceAll('{{aws_account_id}}', item.aws_account_id);
         row = row.replace('{{aws_region}}', item.aws_region);
-        row = row.replace('{{aws_account_id}}', item.aws_account_id);
+        row = row.replaceAll('{{file_hash}}', item.file_hash);
+        row = row.replaceAll('{{target_name}}', item.target_name);
         row = row.replace('{{timestamp_dt}}', item.timestamp_dt);
+        row = row.replace('{{target_name}}', item.target_name);
         tbody.insertAdjacentHTML('beforeend', row);
     });
 
@@ -294,13 +398,17 @@ async function handleDetailPage(clientName) {
 }
 
 async function init() {
-    if (document.getElementById('clientRowTemplate')) handleIndexPage();
     const urlParams = new URLSearchParams(window.location.search);
+    console.log(window.location);
+    console.log(window.location.search);
     const clientName = urlParams.get('name');
     if (clientName) {
+        console.log('Client name: ' + clientName);
         handleDetailPage(clientName);
+    } else {
+        console.log('index');
+        if (document.getElementById('clientRowTemplate')) handleIndexPage();
     }
-
 }
 
 document.addEventListener('DOMContentLoaded', init);
