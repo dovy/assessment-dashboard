@@ -23,17 +23,20 @@ def lambda_handler(event, context):
     # Base directory where your files are stored
     root = os.path.dirname(__file__)
 
-    # Extract the path from the event
-    requested_path = event.get('path', '/').lstrip('/')
+    # print(event)
+    # print(context)
 
+    # Extract the path from the event
+    requested_path = event.get('path', event.get('rawPath', '/')).lstrip('/')
+    # print(requested_path)
     # Default to index.html if the root is accessed
     if requested_path == '' or requested_path == 'client':
         requested_path = 'index.html'
-    print(requested_path)
-    print('WORD')
     if requested_path == "api/all":
+        # print("api/all")
         return get_clients_data(event)
     if requested_path == "api/client":
+        # print("api/client")
         if not event['queryStringParameters'] or (
                 event['queryStringParameters'] and 'name' not in event['queryStringParameters']):
             return {
@@ -50,10 +53,12 @@ def lambda_handler(event, context):
 
     # Guess the MIME type of the file based on its extension
     content_type, _ = mimetypes.guess_type(filepath)
+    # print(content_type)
     if content_type is None:
         content_type = 'application/octet-stream'  # Default to binary stream if unknown
 
     try:
+        # print(filepath)
         # Open the file in binary mode
         with open(filepath, 'rb') as file:
             file_content = file.read()
@@ -69,7 +74,7 @@ def lambda_handler(event, context):
             #     'isBase64Encoded': is_base64_encoded
             # }
 
-            if ".js" in filepath or ".png" in filepath:
+            if ".js" in filepath or ".png" in filepath or ".svg" in filepath or ".htm" in filepath:
                 is_base64_encoded = False
 
             # Encode file content in base64 for binary files
@@ -168,6 +173,9 @@ def get_clients_data(event):
     if not os.getenv('AWS_SAM_LOCAL'):
         data = run_general_query()
 
+    if 'body' in data:
+        data = data['body']
+
     if 'queryStringParameters' in event and event['queryStringParameters'] and 'html' in event['queryStringParameters']:
         content = f"<html><body><h1>Query Results</h1><p>API results here.</p><code><pre>{json.dumps(data['body'], indent=2, sort_keys=True, default=str)}</pre></code></body></html>"
         return {
@@ -178,7 +186,7 @@ def get_clients_data(event):
     return {
         'statusCode': 200,
         'headers': {'Content-Type': 'application/json'},
-        'body': json.dumps(data['body'])
+        'body': data
     }
 
 
@@ -187,139 +195,114 @@ def get_client_drilldown(event, client_name):
     # or generate HTML content dynamically
 
     data = {
-        'body': {
-            "items": [
-                {
-                    "avg_duration": "175.5755717754364",
-                    "aws_account_id": "122610477593",
-                    "aws_region": "us-east-1",
-                    "file_hash": "6a5095ebefd1495ea5d98eadef9ad127",
-                    "process": "lambda-profile",
-                    "target_format": "csv",
-                    "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/meta/profile_athena/banana_20250228_6a5095ebefd1495ea5d98eadef9ad127.csv",
-                    "timestamp_dt": "2025-02-28 14:09:57.131"
-                },
-                {
-                    "avg_duration": "164.18754625320435",
-                    "aws_account_id": "122610477593",
-                    "aws_region": "us-east-1",
-                    "file_hash": "e5e3194748464d8eaed4f8e1452854cb",
-                    "process": "lambda-profile",
-                    "target_format": "csv",
-                    "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/meta/profile_athena/care_credit_sample_20250601_20250227_e5e3194748464d8eaed4f8e1452854cb.csv",
-                    "timestamp_dt": "2025-02-27 22:35:57.072"
-                },
-                {
-                    "avg_duration": "205.82486653327942",
-                    "aws_account_id": "122610477593",
-                    "aws_region": "us-east-1",
-                    "file_hash": "5732b53c056240e2a149322cd856300b",
-                    "process": "lambda-profile",
-                    "target_format": "csv",
-                    "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/meta/profile_athena/francis_test_12_20250227_5732b53c056240e2a149322cd856300b.csv",
-                    "timestamp_dt": "2025-02-27 22:54:54.129"
-                },
-                {
-                    "avg_duration": "84.43361020088196",
-                    "aws_account_id": "122610477593",
-                    "aws_region": "us-east-1",
-                    "file_hash": "5732b53c056240e2a149322cd856300b",
-                    "process": "lambda-stage",
-                    "target_format": None,
-                    "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/landing/francis_test_12_20250227_5732b53c056240e2a149322cd856300b.csv",
-                    "timestamp_dt": "2025-02-27 22:48:42.394"
-                },
-                {
-                    "avg_duration": "4.812428712844849",
-                    "aws_account_id": "122610477593",
-                    "aws_region": "us-east-1",
-                    "file_hash": "e5e3194748464d8eaed4f8e1452854cb",
-                    "process": "lambda-stage",
-                    "target_format": None,
-                    "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/landing/care_credit_sample_20250601_20250227_e5e3194748464d8eaed4f8e1452854cb.csv",
-                    "timestamp_dt": "2025-02-27 22:30:24.860"
-                },
-                {
-                    "avg_duration": "2.067328453063965",
-                    "aws_account_id": "122610477593",
-                    "aws_region": "us-east-1",
-                    "file_hash": "ce5e5614ff3d4013834051bb9f1fa39e",
-                    "process": "lambda-stage",
-                    "target_format": None,
-                    "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/landing/care_credit_sample_20250602_20250227_ce5e5614ff3d4013834051bb9f1fa39e.csv",
-                    "timestamp_dt": "2025-02-27 22:30:28.160"
-                },
-                {
-                    "avg_duration": "4.670217990875244",
-                    "aws_account_id": "122610477593",
-                    "aws_region": "us-east-1",
-                    "file_hash": "6a5095ebefd1495ea5d98eadef9ad127",
-                    "process": "lambda-stage",
-                    "target_format": None,
-                    "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/landing/banana_20250228_6a5095ebefd1495ea5d98eadef9ad127.csv",
-                    "timestamp_dt": "2025-02-28 14:04:55.395"
-                }
-            ],
-            "stats": {
-                "lambda-profile": {
-                    "avg_duration": 181.86266152064005,
-                    "count": 3,
-                    "duration": [
-                        175.5755717754364,
-                        164.18754625320435,
-                        205.82486653327942
-                    ],
-                    "files": {},
-                    "latest_hash": "6a5095ebefd1495ea5d98eadef9ad127",
-                    "latest_target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/meta/profile_athena/banana_20250228_6a5095ebefd1495ea5d98eadef9ad127.csv",
-                    "latest_timestamp": "2025-02-28 14:09:57.131000"
-                },
-                "lambda-stage": {
-                    "avg_duration": 23.995896339416504,
-                    "count": 4,
-                    "duration": [
-                        84.43361020088196,
-                        4.812428712844849,
-                        2.067328453063965,
-                        4.670217990875244
-                    ],
-                    "files": {},
-                    "latest_hash": "6a5095ebefd1495ea5d98eadef9ad127",
-                    "latest_target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/landing/banana_20250228_6a5095ebefd1495ea5d98eadef9ad127.csv",
-                    "latest_timestamp": "2025-02-28 14:04:55.395000"
-                }
+        'body': [
+            {
+                "avg_duration": "175.5755717754364",
+                "aws_account_id": "122610477593",
+                "aws_region": "us-east-1",
+                "file_hash": "6a5095ebefd1495ea5d98eadef9ad127",
+                "process": "lambda-profile",
+                "target_format": "csv",
+                "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/meta/profile_athena/banana_20250228_6a5095ebefd1495ea5d98eadef9ad127.csv",
+                "timestamp_dt": "2025-02-28 14:09:57.131"
+            },
+            {
+                "avg_duration": "164.18754625320435",
+                "aws_account_id": "122610477593",
+                "aws_region": "us-east-1",
+                "file_hash": "e5e3194748464d8eaed4f8e1452854cb",
+                "process": "lambda-profile",
+                "target_format": "csv",
+                "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/meta/profile_athena/care_credit_sample_20250601_20250227_e5e3194748464d8eaed4f8e1452854cb.csv",
+                "timestamp_dt": "2025-02-27 22:35:57.072"
+            },
+            {
+                "avg_duration": "205.82486653327942",
+                "aws_account_id": "122610477593",
+                "aws_region": "us-east-1",
+                "file_hash": "5732b53c056240e2a149322cd856300b",
+                "process": "lambda-profile",
+                "target_format": "csv",
+                "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/meta/profile_athena/francis_test_12_20250227_5732b53c056240e2a149322cd856300b.csv",
+                "timestamp_dt": "2025-02-27 22:54:54.129"
+            },
+            {
+                "avg_duration": "84.43361020088196",
+                "aws_account_id": "122610477593",
+                "aws_region": "us-east-1",
+                "file_hash": "5732b53c056240e2a149322cd856300b",
+                "process": "lambda-stage",
+                "target_format": None,
+                "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/landing/francis_test_12_20250227_5732b53c056240e2a149322cd856300b.csv",
+                "timestamp_dt": "2025-02-27 22:48:42.394"
+            },
+            {
+                "avg_duration": "4.812428712844849",
+                "aws_account_id": "122610477593",
+                "aws_region": "us-east-1",
+                "file_hash": "e5e3194748464d8eaed4f8e1452854cb",
+                "process": "lambda-stage",
+                "target_format": None,
+                "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/landing/care_credit_sample_20250601_20250227_e5e3194748464d8eaed4f8e1452854cb.csv",
+                "timestamp_dt": "2025-02-27 22:30:24.860"
+            },
+            {
+                "avg_duration": "2.067328453063965",
+                "aws_account_id": "122610477593",
+                "aws_region": "us-east-1",
+                "file_hash": "ce5e5614ff3d4013834051bb9f1fa39e",
+                "process": "lambda-stage",
+                "target_format": None,
+                "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/landing/care_credit_sample_20250602_20250227_ce5e5614ff3d4013834051bb9f1fa39e.csv",
+                "timestamp_dt": "2025-02-27 22:30:28.160"
+            },
+            {
+                "avg_duration": "4.670217990875244",
+                "aws_account_id": "122610477593",
+                "aws_region": "us-east-1",
+                "file_hash": "6a5095ebefd1495ea5d98eadef9ad127",
+                "process": "lambda-stage",
+                "target_format": None,
+                "target_name": "s3://122610477593-us-east-1-dev1-examplecorp-processing/landing/banana_20250228_6a5095ebefd1495ea5d98eadef9ad127.csv",
+                "timestamp_dt": "2025-02-28 14:04:55.395"
             }
-        }
+        ]
     }
+
     if not os.getenv('AWS_SAM_LOCAL'):
         data = run_drilldown_query(client_name)
+        data['body'] = json.loads(data['body'])
+    if 'body' in data:
+        data = data['body']
+    if type(data) == dict:
+        data = list(data)
 
-        stats = {}
-        for item in data['body']:
-            if item['process'] not in stats:
-                stats[item['process']] = {
-                    'count': 0,
-                    'duration': [],
-                    'avg_duration': 0,
-                    'latest_timestamp': datetime(year=1999, month=1, day=1),
-                    'latest_hash': '',
-                }
-            stats[item['process']]['count'] += 1
-            stats[item['process']]['duration'].append(float(item['avg_duration']))
-            stats[item['process']]['avg_duration'] = sum(stats[item['process']]['duration']) / len(
-                stats[item['process']]['duration'])
-            parsed_date = datetime.strptime(item['timestamp_dt'], date_format)
-            if parsed_date > stats[item['process']]['latest_timestamp']:
-                stats[item['process']]['latest_timestamp'] = parsed_date
-                stats[item['process']]['latest_hash'] = item['file_hash']
-                stats[item['process']]['latest_target_name'] = item['target_name']
-
-        data = {
-            'body': {
-                'items': data['body'],
-                'stats': stats
+    stats = {}
+    for item in data:
+        if not item:
+            continue
+        if item['process'] not in stats:
+            stats[item['process']] = {
+                'count': 0,
+                'duration': [],
+                'avg_duration': 0,
+                'latest_timestamp': datetime(year=1999, month=1, day=1),
+                'latest_hash': '',
             }
-        }
+        stats[item['process']]['count'] += 1
+        stats[item['process']]['duration'].append(float(item['avg_duration']))
+        stats[item['process']]['avg_duration'] = sum(stats[item['process']]['duration']) / len(
+            stats[item['process']]['duration'])
+        parsed_date = datetime.strptime(item['timestamp_dt'], date_format)
+        if parsed_date > stats[item['process']]['latest_timestamp']:
+            stats[item['process']]['latest_timestamp'] = parsed_date
+            stats[item['process']]['latest_hash'] = item['file_hash']
+            stats[item['process']]['latest_target_name'] = item['target_name']
+
+    data = {
+        'items': data,
+        'stats': stats
+    }
     data = json.loads(json.dumps(data, indent=2, sort_keys=True, default=str))
     if 'queryStringParameters' in event and event['queryStringParameters'] and 'html' in event['queryStringParameters']:
         content = f"<html><body><h1>Query Results</h1><p>Client `{client_name}` API results here.</p><code><pre>{json.dumps(data['body'], indent=2, sort_keys=True, default=str)}</pre></code></body></html>"
@@ -331,7 +314,7 @@ def get_client_drilldown(event, client_name):
     return {
         'statusCode': 200,
         'headers': {'Content-Type': 'application/json'},
-        'body': data['body']
+        'body': data
     }
 
 
@@ -370,9 +353,10 @@ def run_drilldown_query(client_name):
 	aws_region,
     cast(duration as double) as avg_duration
     FROM "centralized"."logs"
-    WHERE step_key LIKE '%end%' AND client_name = 'Example Corp'
+    WHERE step_key LIKE '%end%' AND client_name = '{client_name}'
     ORDER BY client_name, process ASC
     """
+
     return execute_query(query)
 
 
