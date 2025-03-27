@@ -8606,7 +8606,9 @@ async function handleDetailPage(clientName) {
     try {
         const res = await lib_axios.get(`/api/client?name=${encodeURIComponent(clientName)}`);
         data = res.data;
+        console.log('here');
     } catch (error) {
+        console.log('there');
         console.log('Failed fetching data, using local data instead.');
         data = {
             "stats": {
@@ -8695,7 +8697,7 @@ async function handleDetailPage(clientName) {
     }
 
     let lambdaProfileData = {};
-
+    console.log(data);
     if (data.stats.hasOwnProperty("lambda-profile")) {
         lambdaProfileData = data.stats['lambda-profile'].duration;
         const mainChartOptions = getMainChartOptions(lambdaProfileData);
