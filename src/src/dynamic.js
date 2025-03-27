@@ -277,34 +277,7 @@ async function handleDetailPage(clientName) {
     const statsChart = new ApexCharts(document.getElementById('stats-avg-duration-chart'), staticOptions);
     statsChart.render();
 
-    const template = `<tr>
-    <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
-        {{timestamp_dt}}
-    </td>
-    <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
-        <span>{{file_hash}}</span>
-    </td>
-    <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
-        <span class="font-semibold">{{process}}</span>
-    </td>
-    <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
-        {{avg_duration}}
-    </td>
-    <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
-        <a href="https://{{aws_account_id}}.signin.aws.amazon.com/console" type="button" target="_blank"
-           class="mb-4 sm:mb-0 mr-4 inline-flex text-green-200 items-center text-gray-900 border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm p-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"> {{aws_account_id}} [{{aws_region}}] &nbsp;
-             <img src="//localhost:1313/external-link.svg" class="svg" style="height:16px;" alt="" />
-        </a>
-    </td>
-    <td class="p-4 text-sm font-normal text-gray-900 whitespace-nowrap dark:text-white">
-        <a href="{{target_name}}" type="button" target="_blank"
-           class="mb-4 sm:mb-0 mr-4 inline-flex text-green-200 items-center text-gray-900 border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-sm p-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700">
-             <img src="//localhost:1313/external-link.svg" class="svg" style="height:16px;" alt="" />
-        </a>
-    </td>
-</tr>`
-    
-    // document.getElementById('itemRowTemplate').innerHTML;
+    const template = document.getElementById('itemRowTemplate').innerHTML;
     const tbody = document.querySelector('#itemTable tbody');
 
     data.items.forEach(item => {
